@@ -35,7 +35,7 @@ class TestBooksCollector:
     def test_get_book_genre_returns_correct_genre(self):
         collector = BooksCollector()
         collector.add_new_book('Двенадцать стульев')
-        collector.set_book_genre('Двенадцать стульев', 'Комедии')
+        collector.books_genre['Двенадцать стульев'] = 'Комедии'
         
         assert collector.get_book_genre('Двенадцать стульев') == 'Комедии'
 
